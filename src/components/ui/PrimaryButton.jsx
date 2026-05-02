@@ -1,9 +1,9 @@
 import { cn } from '../../lib/utils'
 
 const sizeClasses = {
-  sm: 'min-h-12 px-8 text-sm',
-  md: 'min-h-[58px] px-9 text-base',
-  lg: 'min-h-[74px] px-11 text-xl',
+  sm: 'min-h-12 px-6 text-sm sm:px-8',
+  md: 'min-h-12 px-6 text-sm sm:min-h-[58px] sm:px-9 sm:text-base',
+  lg: 'min-h-12 px-6 text-sm sm:min-h-14 sm:px-8 sm:text-base lg:min-h-[74px] lg:px-11 lg:text-xl',
 }
 
 const variantClasses = {
@@ -27,6 +27,7 @@ function PrimaryButton({
       type={href ? undefined : type}
       className={cn(
         'inline-flex items-center justify-center rounded-lg font-bold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+        'max-w-full text-center leading-tight',
         sizeClasses[size],
         variantClasses[variant],
         className,

@@ -17,8 +17,20 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-width: 0;
+  }
+
+  html,
   body {
-    @apply m-0 bg-white font-sans text-body;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply m-0 bg-white font-sans text-body antialiased;
   }
 
   button,
@@ -27,6 +39,6 @@
   }
 
   img {
-    @apply max-w-full;
+    @apply h-auto max-w-full;
   }
 }
